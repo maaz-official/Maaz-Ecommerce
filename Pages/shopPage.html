@@ -1,152 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-    />
-    <link
-      rel="for sliding"
-      href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
-    />
-    <script src="https://kit.fontawesome.com/4576dc386c.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../css/shop.css" />
-    <title>Ecommerce Navbar</title>
-  </head>
-  <body>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      />
-      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-      <link rel="stylesheet" href="../css/shop.css" />
-      <title>Ecommerce Navbar</title>
-    </head>
-    <body>
-      <div class="container">
-        <div class="sidebar close">
-          <div class="logo-details">
-            <i class="bx bxl-c-plus-plus"></i>
-            <span class="logo_name">M_Ecommerce</span>
-          </div>
-          <ul class="nav-links">
-            <li>
-              <a href="/Pages/homePage.html">
-                <i class="fas fa-home"></i> Home
-              </a>
-            </li>
-            <li>
-              <a href="/Pages/shopPage.html">
-                <i class="fas fa-store"></i> Shop
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fas fa-info-circle"></i> About
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fas fa-envelope"></i> Contact
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fas fa-shopping-cart"></i> Cart
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fas fa-sign-in-alt"></i> Sign In
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fas fa-user-plus"></i> Register
-              </a>
-            </li>
-            </ul>
-        </div>
-    
-        <section class="main-content">
-          <i class="bx bx-menu toggle-sidebar"></i> </section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+  <link rel="for sliding" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  <script src="https://kit.fontawesome.com/4576dc386c.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/shop.css">
+  <link rel="stylesheet" href="../css/shop.scss">
+  <title>Ecommerce Navbar</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="#">Muhammad Maaz</a>
       </div>
-    
-      <!-- <script>
-        let sidebar = document.querySelector(".sidebar");
-        let sidebarBtn = document.querySelector(".toggle-sidebar"); // Use toggle-sidebar class
-    
-        sidebarBtn.addEventListener("click", () => {
-          sidebar.classList.toggle("close");
-        });
-      </script> -->
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <!-- Menu toggle icon -->
+      <ul class="nav-links">
+        <li>
+          <a href="/Pages/homePage.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="/Pages/shopPage.html"><i class="fas fa-store"></i> Shop</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-info-circle"></i> About</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+        </li>
+      </ul>
+      <div class="icons">
+        <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+        <a href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+        <!-- Add Sign In link -->
+        <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+        <!-- Add Register link -->
+      </div>
+    </div>
+  </nav>
 
-    <script>
-      let arrow = document.querySelectorAll(".arrow");
-      for (var i = 0; i < arrow.length; i++) {
-        arrow[i].addEventListener("click", (e) => {
-          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
-          arrowParent.classList.toggle("showMenu");
-        });
-      }
-      let sidebar = document.querySelector(".sidebar");
-      let sidebarBtn = document.querySelector(".bx-menu");
-      console.log(sidebarBtn);
-      sidebarBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("close");
+  <!-- Sidebar
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-sidebar"><i class="fas fa-times fa-2x"></i></div>
+    <ul class="sidebar-menu">
+      <li><a href="#" data-filter="all">All</a></li>
+      <li><a href="#" data-filter="category1">Category 1</a></li>
+      <li><a href="#" data-filter="category2">Category 2</a></li>
+      <li><a href="#" data-filter="category3">Category 3</a></li>
+      <li><hr></li>
+      <li><a href="#" data-filter="low-high">Price (Low - High)</a></li>
+      <li><a href="#" data-filter="high-low">Price (High - Low)</a></li>
+      <li><a href="#" data-filter="new">New Arrivals</a></li>
+    </ul>
+  </div> -->
+
+  <div class="main-content">
+    <h1>Our Products</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="../assets/Laptop1.png" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">Product Title</h5>
+            <p class="card-text">Price: $XX.XX</p>
+            <p class="card-text">Brief Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="btn btn-secondary">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="../assets/Laptop1.png" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">Product Title</h5>
+            <p class="card-text">Price: $XX.XX</p>
+            <p class="card-text">Brief Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="btn btn-secondary">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="../assets/Laptop1.png" class="card-img-top" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">Product Title</h5>
+            <p class="card-text">Price: $XX.XX</p>
+            <p class="card-text">Brief Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <a href="#" class="btn btn-secondary">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Add more product cards here -->
+    </div>
+  </div>
+  
+  <script>
+    // JavaScript functionality
+    // Select all 'Add to Cart' buttons
+    const addToCartButtons = document.querySelectorAll('.btn-primary');
+
+    // Get the cart count element
+    const cartCountElement = document.querySelector('.icons a[href="#"] i');
+    let cartCount = 0; // Initialize cart count
+
+    // Add event listener to each 'Add to Cart' button
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Increase the cart count by 1
+        cartCount++;
+
+        // Update the cart count in the navbar
+        cartCountElement.innerText = cartCount;
       });
-    </script>
+    });
+  </script>
 
-    <!--  -->
+  <script>
+    // JavaScript functionality
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const sidebar = document.getElementById("sidebar");
+    const closeSidebar = document.getElementById("close-sidebar");
 
-    <script>
-      // script.js
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
 
-      // Get menu toggle icon and nav links
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navLinks = document.querySelector(".nav-links");
+    closeSidebar.addEventListener("click", () => {
+      sidebar.classList.remove("active");
+    });
+  </script>
 
-      // Add click event listener to menu toggle icon
-      menuToggle.addEventListener("click", () => {
-        // Toggle the 'active' class on nav links to show/hide them
-        navLinks.classList.toggle("active");
-      });
-    </script>
-    <script>
-      //ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
-      // Search Bar
-      https: document
-        .querySelector(".search-btn")
-        .addEventListener("click", () => {
-          const search = document.querySelector(".search").value;
+  <!-- <script>
+    // script.js
 
-          if (search % 2 === 0 || search % 2 === 1) {
-            console.log(
-              "⚠️ Warning: This search engine is not connected to the website ❗️"
-            );
-            alert("⚠️ This search engine is not connected to the website ❗️");
-          } else {
-            document.querySelector(".search-bar").classList.toggle("active");
-          }
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    // Get menu toggle icon and nav links
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    // Add click event listener to menu toggle icon
+    menuToggle.addEventListener("click", () => {
+      // Toggle the 'active' class on nav links to show/hide them
+      navLinks.classList.toggle("active");
+    });
+  </script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
