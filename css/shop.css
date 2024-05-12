@@ -186,34 +186,86 @@ li a:focus::after {
     justify-content: space-between;
     align-items: center;
 }
+
+/* Additional styles for product card */
 .product-card {
     border: 1px solid #ddd;
     width: 300px;
     margin-top: 20px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
   
   .product-card img {
-    max-height: 200px; /* Adjust image height as needed */
-    object-fit: cover; /* Scale image to fit card */
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%; /* Ensure image fills the container */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
   
   .product-card .card-body {
-    padding: 15px;
+    padding: 20px;
   }
   
   .product-card .card-title {
     margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
   }
   
   .product-card .card-text {
-    color: #333;
-    margin-bottom: 5px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5; /* Improve readability */
   }
   
   .product-card .btn {
-    margin-top: 10px;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  .product-card .btn-primary {
+    background-color: #ff9900;
+    border-color: #ff9900;
+    color: #fff;
+  }
+  
+  .product-card .btn-primary:hover {
+    background-color: #e68a00;
+    transform: scale(1.05); /* Grow slightly on hover */
+  }
+  
+  .product-card .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+  }
+  
+  .product-card .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  .product-card .btn-outline {
+    background-color: transparent;
+    border: 1px solid #ff9900;
+    color: #ff9900;
+  }
+  
+  .product-card .btn-outline:hover {
+    background-color: #ff9900;
+    color: #fff;
   }
   
