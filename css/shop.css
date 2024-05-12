@@ -1,178 +1,129 @@
-/* styles.css */
-
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* Apply fonts to elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
-  margin: 0; /* Remove default margin */
+  display: flex; /* Allow sidebar and content to fit side-by-side */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-}
+/* Container styles (unchanged) */
 
-.container {
-  max-width: 1200px; /* Set maximum width for better readability */
-  margin: 0 auto; /* Center the container */
-  padding: 10px 20px; /* Add some padding to the sides */
-  display: flex;
-  justify-content: space-around; /* Spread the elements evenly */
-  align-items: center; /* Vertically center the items */
-}
-
-.navbar {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 10px 0;
-  filter: drop-shadow(0px 4px 10px #bd83ec);
-}
-
-.logo a {
-  color: #000000;
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: bold; /* Add some emphasis */
-}
-
-.nav-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.nav-links li:last-child {
-  margin-right: 0;
-}
-
-.nav-links li a {
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.3s; /* Add smooth transition on hover */
-}
-
-.nav-links li a:hover {
-  color: #ff9900; /* Change color on hover */
-}
-
-/* Underline styles */
-li a {
-  position: relative;
-  padding: 0.2em 0;
-}
-
-/* Fade in */
-li a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;
-  height: 0.1em;
-  background-color: hotpink;
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
+  width: 250px;
+  height: 100vh;
+  background-color: #111;
+  padding: 20px;
+  transition: all 0.5s ease;
 }
-
-li a:hover::after,
-li a:focus::after {
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
+.sidebar.close {
+  width: 60px;
+  overflow: hidden;
 }
-
-.icons {
+.sidebar .logo-details {
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
-
-.icons a {
+.sidebar .logo-details .bx {
+  color: #fff;
+  font-size: 25px;
+  margin-top: 50px;
+  margin-right: 10px;
+}
+.sidebar .logo-details .logo_name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+.sidebar ul.nav-links {
+    margin-left: 3px;
+  list-style: none;
+}
+.sidebar ul.nav-links li {
+  margin: 15px 0;
+}
+.sidebar ul.nav-links a {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #fff;
   text-decoration: none;
-  color: #000000;
-  margin-right: 20px; /* Add margin between icons */
+  font-size: 18px;
+  transition: all 0.3s ease;
+  padding: 10px 0; /* Add some padding for better click target */
+}
+.sidebar ul.nav-links a:hover {
+    width: 100%;
+  background-color: #007bff;
+  border-radius: 20px 20px;
+}
+.sidebar .bx {
+  color: #fff;
+  font-size: 22px;
+  margin-right: 15px;
 }
 
-.icons a:hover {
-  color: #ff9900; /* Change color on hover */
+/* Styles for active sidebar item */
+.sidebar ul.nav-links li.active a {
+  background-color: #007bff; /* Highlight the active item */
 }
 
-.search-cart img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s; /* Add smooth transition on hover */
+/* Main content styles */
+.main-content {
+  flex: 1; /* Allow content to fill remaining space */
+  padding: 20px;
+}
+.main-content.close {
+  margin-left: 60px;
+}
+.toggle-sidebar {
+    margin-bottom: 25px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  font-size: 30px;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.main-content.close .toggle-sidebar {
+  transform: rotate(180deg);
 }
 
-.search-cart img:hover {
-  transform: scale(1.1); /* Increase size on hover */
+/* Dropdown menu styles */
+.sub-menu {
+  display: none;
+  padding: 5px;
+  background-color: #1d1b31;
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  transition: all 0.3s ease;
 }
-.menu-toggle {
-  display: none; /* Hide menu toggle icon by default */
+.sub-menu a {
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
-    padding: 10px; /* Adjust padding for smaller screens */
-  }
-
-  .nav-links {
-    margin-top: 2px; /* Add some space between logo and nav links */
-    display: none; /* Hide nav links by default on small screens */
-    flex-direction: column;
-  }
-
-  .nav-links.active {
-    display: flex; /* Show nav links when menu is toggled */
-  }
-
-  .nav-links li {
-    display: block; /* Convert nav links to block for stacked layout */
-    margin: 10px 0; /* Add some vertical margin between links */
-  }
-
-  .icons {
-    align-items: center;
-    justify-content: space-around;
-    gap: 15px;
-    flex-direction: column; /* Stack icons vertically on small screens */
-    margin-top: 20px; /* Add some space between nav links and icons */
-  }
-
-  .menu-toggle {
-    display: block; /* Show menu toggle icon on small screens */
-    cursor: pointer; /* Change cursor to pointer */
-    margin-bottom: 5px; /* Add some margin below the menu toggle icon */
-    margin-top: 10px;
-    margin-right: 10px;
-  }
-
-  /* Add animation to navbar items */
-  .nav-links li {
-    transition-delay: 0.2s; /* Add delay for animation */
-  }
-
-  .nav-links li:nth-child(2) {
-    transition-delay: 0.3s; /* Add delay for animation */
-  }
-
-  .nav-links li:nth-child(3) {
-    transition-delay: 0.4s; /* Add delay for animation */
-  }
-
-  .nav-links li:nth-child(4) {
-    transition-delay: 0.5s; /* Add delay for animation */
-  }
+.sub-menu a:hover {
+  background-color: #007bff;
 }

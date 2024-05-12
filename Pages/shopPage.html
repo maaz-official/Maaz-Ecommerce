@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link
@@ -19,210 +20,133 @@
     />
     <script src="https://kit.fontawesome.com/4576dc386c.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/style.scss" />
+    <link rel="stylesheet" href="../css/shop.css" />
     <title>Ecommerce Navbar</title>
   </head>
   <body>
-    <nav class="navbar">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      />
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <link rel="stylesheet" href="../css/shop.css" />
+      <title>Ecommerce Navbar</title>
+    </head>
+    <body>
       <div class="container">
-        <div class="logo">
-          <a href="#">Muhammad Maaz</a>
+        <div class="sidebar close">
+          <div class="logo-details">
+            <i class="bx bxl-c-plus-plus"></i>
+            <span class="logo_name">M_Ecommerce</span>
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a href="/Pages/homePage.html">
+                <i class="fas fa-home"></i> Home
+              </a>
+            </li>
+            <li>
+              <a href="/Pages/shopPage.html">
+                <i class="fas fa-store"></i> Shop
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-info-circle"></i> About
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-envelope"></i> Contact
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-shopping-cart"></i> Cart
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-sign-in-alt"></i> Sign In
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-user-plus"></i> Register
+              </a>
+            </li>
+            </ul>
         </div>
-        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        <!-- Menu toggle icon -->
-        <ul class="nav-links">
-          <li>
-            <a href="/Pages/homePage.html"><i class="fas fa-home"></i> Home</a>
-          </li>
-          <li>
-            <a href="/Pages/shopPage.html"><i class="fas fa-store"></i> Shop</a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-info-circle"></i> About</a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-envelope"></i> Contact</a>
-          </li>
-        </ul>
-        <div class="icons">
-          <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
-          <a href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a>
-          <!-- Add Sign In link -->
-          <a href="#"><i class="fas fa-user-plus"></i> Register</a>
-          <!-- Add Register link -->
-        </div>
+    
+        <section class="main-content">
+          <i class="bx bx-menu toggle-sidebar"></i> </section>
       </div>
-    </nav>
+    
+      <!-- <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".toggle-sidebar"); // Use toggle-sidebar class
+    
+        sidebarBtn.addEventListener("click", () => {
+          sidebar.classList.toggle("close");
+        });
+      </script> -->
 
-    <!-- SideBar -->
-        <div class="filter"> <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#mobile-filter" aria-expanded="false" aria-controls="mobile-filter">Filters<span class="fa fa-filter pl-1"></span></button>
-        </div>
-        <div id="mobile-filter">
-        <div>
-        <h6 class="p-1 border-bottom">Home Furniture</h6>
-        <ul>
-        <li><a href="#">Living</a></li>
-        <li><a href="#">Dining</a></li>
-        <li><a href="#">Office</a></li>
-        <li><a href="#">Bedroom</a></li>
-        <li><a href="#">Kitchen</a></li>
-        </ul>
-        </div>
-        <div>
-        <h6 class="p-1 border-bottom">Filter By</h6>
-        <p class="mb-2">Color</p>
-        <ul class="list-group">
-        <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#"> <span class="fa fa-circle pr-1" id="red"></span>Red </a></li>
-        <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#"> <span class="fa fa-circle pr-1" id="teal"></span>Teal </a></li>
-        <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#"> <span class="fa fa-circle pr-1" id="blue"></span>Blue </a></li>
-        </ul>
-        </div>
-        <div>
-        <h6>Type</h6>
-        <form class="ml-md-2">
-        <div class="form-inline border rounded p-sm-2 my-2"> <input type="radio" name="type" id="boring"> <label for="boring" class="pl-1 pt-sm-0 pt-1">Boring</label> </div>
-        <div class="form-inline border rounded p-sm-2 my-2"> <input type="radio" name="type" id="ugly"> <label for="ugly" class="pl-1 pt-sm-0 pt-1">Ugly</label> </div>
-        <div class="form-inline border rounded p-md-2 p-sm-1"> <input type="radio" name="type" id="notugly"> <label for="notugly" class="pl-1 pt-sm-0 pt-1">Not Ugly</label> </div>
-        </form>
-        </div>
-        </div>
-        <div id="sidebar">
-        <div>
-        <h6 class="p-1 border-bottom">Home Furniture</h6>
-        <ul>
-        <li><a href="#">Living</a></li>
-        <li><a href="#">Dining</a></li>
-        <li><a href="#">Office</a></li>
-        <li><a href="#">Bedroom</a></li>
-        <li><a href="#">Kitchen</a></li>
-        </ul>
-        </div>
-        <div>
-        <h6 class="p-1 border-bottom">Filter By</h6>
-        <p class="mb-2">Color</p>
-        <ul class="list-group">
-        <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#"> <span class="fa fa-circle pr-1" id="red"></span>Red </a></li>
-        <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#"> <span class="fa fa-circle pr-1" id="teal"></span>Teal </a></li>
-        <li class="list-group-item list-group-item-action mb-2 rounded"><a href="#"> <span class="fa fa-circle pr-1" id="blue"></span>Blue </a></li>
-        </ul>
-        </div>
-        <div>
-        <h6>Type</h6>
-        <form class="ml-md-2">
-        <div class="form-inline border rounded p-sm-2 my-2"> <input type="radio" name="type" id="boring"> <label for="boring" class="pl-1 pt-sm-0 pt-1">Boring</label> </div>
-        <div class="form-inline border rounded p-sm-2 my-2"> <input type="radio" name="type" id="ugly"> <label for="ugly" class="pl-1 pt-sm-0 pt-1">Ugly</label> </div>
-        <div class="form-inline border rounded p-md-2 p-sm-1"> <input type="radio" name="type" id="notugly"> <label for="notugly" class="pl-1 pt-sm-0 pt-1">Not Ugly</label> </div>
-        </form>
-        </div>
-        </div>
-        <div id="products">
-        <div class="container">
-        <div class="row">
-        <div class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
-        <div class="card"> <img class="card-img-top" src="https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
-        <div class="card-body">
-        <p class="card-text">Wooden chair with legs</p>
-        <p>$90</p> <span class="fa fa-circle" id="red"></span> <span class="fa fa-circle" id="teal"></span> <span class="fa fa-circle" id="blue"></span>
-        </div>
-        </div>
-        </div>
-        <div class="col-lg-3 offset-lg-0 col-sm-4 offset-sm-2 col-11 offset-1">
-        <div class="card"> <img class="card-img-top" src="https://images.pexels.com/photos/1125137/pexels-photo-1125137.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
-        <div class="card-body">
-        <p class="card-text">Ugly chair and table set</p>
-        <p>$100</p> <span class="fa fa-circle" id="red"></span> <span class="fa fa-circle" id="teal"></span> <span class="fa fa-circle" id="blue"></span>
-        </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
-        <div class="card"> <img class="card-img-top" src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
-        <div class="card-body">
-        <p class="card-text">Leather Lounger</p>
-        <p>$950</p> <span class="fa fa-circle" id="red"></span> <span class="fa fa-circle" id="teal"></span> <span class="fa fa-circle" id="blue"></span>
-        </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-4 offset-lg-0 offset-sm-2 col-11 offset-1">
-        <div class="card"> <img class="card-img-top" src="https://images.unsplash.com/photo-1537182534312-f945134cce34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Card image cap">
-        <div class="card-body">
-        <p class="card-text">Tree Trunk table set</p>
-        <p>$390</p> <span class="fa fa-circle" id="red"></span> <span class="fa fa-circle" id="teal"></span> <span class="fa fa-circle" id="blue"></span>
-        </div>
-        </div>
-        </div>
-        </div>
-        <div class="row mt-3">
-        <div class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
-        <div class="card"> <img class="card-img-top" src="https://images.pexels.com/photos/3230274/pexels-photo-3230274.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
-        <div class="card-body">
-        <p class="card-text">Red Leather Bar Stool</p>
-        <p>$30</p> <span class="fa fa-circle" id="red"></span> <span class="fa fa-circle" id="teal"></span> <span class="fa fa-circle" id="blue"></span>
-        </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-4 offset-lg-0 offset-sm-2 col-11 offset-1">
-        <div class="card"> <img class="card-img-top" src="https://images.pexels.com/photos/3773571/pexels-photo-3773571.png?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
-        <div class="card-body">
-        <p class="card-text">Modern Dining Table</p>
-        <p>$740</p> <span class="fa fa-circle" id="red"></span> <span class="fa fa-circle" id="teal"></span> <span class="fa fa-circle" id="blue"></span>
-        </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-4 col-11 offset-sm-0 offset-1">
-        <div class="card"> <img class="card-img-top" src="https://images.pexels.com/photos/534172/pexels-photo-534172.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
-        <div class="card-body">
-        <p class="card-text">Boring Dining Table</p>
-        <p>$760</p> <span class="fa fa-circle" id="red"></span> <span class="fa fa-circle" id="teal"></span> <span class="fa fa-circle" id="blue"></span>
-        </div>
-        </div>
-        </div>
-        <div class="col-lg-3 col-sm-4 offset-lg-0 offset-sm-2 col-11 offset-1">
-        <div class="card"> <img class="card-img-top" src="https://images.pexels.com/photos/37347/office-sitting-room-executive-sitting.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
-        <div class="card-body">
-        <p class="card-text">An Ugly Office</p>
-        <p>$90</p> <span class="fa fa-circle" id="red"></span> <span class="fa fa-circle" id="teal"></span> <span class="fa fa-circle" id="blue"></span>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-    </div> 
-
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
 
     <!--  -->
 
-    
     <script>
-        // script.js
-  
-        // Get menu toggle icon and nav links
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector(".nav-links");
-  
-        // Add click event listener to menu toggle icon
-        menuToggle.addEventListener("click", () => {
-          // Toggle the 'active' class on nav links to show/hide them
-          navLinks.classList.toggle("active");
+      // script.js
+
+      // Get menu toggle icon and nav links
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      // Add click event listener to menu toggle icon
+      menuToggle.addEventListener("click", () => {
+        // Toggle the 'active' class on nav links to show/hide them
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    <script>
+      //ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+      // Search Bar
+      https: document
+        .querySelector(".search-btn")
+        .addEventListener("click", () => {
+          const search = document.querySelector(".search").value;
+
+          if (search % 2 === 0 || search % 2 === 1) {
+            console.log(
+              "⚠️ Warning: This search engine is not connected to the website ❗️"
+            );
+            alert("⚠️ This search engine is not connected to the website ❗️");
+          } else {
+            document.querySelector(".search-bar").classList.toggle("active");
+          }
         });
-      </script>
-      <script>
-        https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
-  // Search Bar
-  document.querySelector(".search-btn").addEventListener("click", () => {
-      const search = document.querySelector(".search").value;
-  
-      if (search % 2 === 0 || search % 2 === 1) {
-        console.log(
-          "⚠️ Warning: This search engine is not connected to the website ❗️"
-        );
-        alert("⚠️ This search engine is not connected to the website ❗️");
-      } else {
-        document.querySelector(".search-bar").classList.toggle("active");
-      }
-    });
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-  </html>
-  
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
